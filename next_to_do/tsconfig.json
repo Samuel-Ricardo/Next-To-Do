@@ -18,7 +18,9 @@
       "@/*": ["./src/*"],
       "@Types": ["./src/@types/index.ts"],
       "@Types/*": ["./src/@types/*"],
-      "@lib/*": ["./lib/*"]
+      "@lib/*": ["./lib/*"],
+      "@Components": ["./src/components/index.ts"],
+      "@Components/*": ["./src/components/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
