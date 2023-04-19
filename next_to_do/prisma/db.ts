@@ -1,4 +1,5 @@
+import { prisma } from "@lib/prisma";
 
-export async function getAllTodos() {
-  const data = await
-}
+export const getAllToDos = async () => await prisma.todo.findMany();
+
+
