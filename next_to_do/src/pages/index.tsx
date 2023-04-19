@@ -1,4 +1,5 @@
 import { Header } from '@/components'
+import { CreateToDo } from '@/components/CreateToDo'
 import { getAllTodos } from '@lib/db'
 import { GetServerSideProps } from 'next'
 import { Inter } from 'next/font/google'
@@ -16,12 +17,11 @@ export const getServerSideProps: GetServerSideProps = async () => {
 }
 
 export default function Home() {
-
-  const [] = useState()
-
   return (
     <div className={`${inter.className} h-screen border-gray-700`}>
       <Header/>      
+
+      <CreateToDo/>
 
     </div>
   )
