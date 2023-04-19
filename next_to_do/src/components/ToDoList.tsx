@@ -1,7 +1,7 @@
 import { Todo } from "@Types";
 import { ToDo } from "./Todo";
 
-export const ToDoList = (todos:Todo[]) => {
+export const ToDoList = ({todos}:{todos:Todo[]}) => {
   
   return (
     <div className="flex flex-1">
