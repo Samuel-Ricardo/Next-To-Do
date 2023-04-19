@@ -1,9 +1,9 @@
 import { Todo } from "@Types"
 
-export const ToDo = (index: number, it: Todo) => {
-  
+export const ToDo = ({it, index}: {index: number, it: Todo}) => {
+
   return (
-    <div key={it.id} className="flex justify-center">
+    <div className="flex justify-center">
       <div className="relative justify-center mt-6">
         <div className="absolute flex top-0 right-0 p-3 space-x-1">
 
