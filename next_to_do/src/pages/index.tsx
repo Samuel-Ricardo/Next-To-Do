@@ -1,5 +1,5 @@
 import { PostProps } from '@Types'
-import { CreateToDo, Header } from '@Components'
+import { CreateToDo, Header, ToDoList } from '@Components'
 import { getAllTodos } from '@lib/db'
 import { GetServerSideProps } from 'next'
 import { Inter } from 'next/font/google'
@@ -21,6 +21,8 @@ export default function Home({todos}:PostProps) {
       <Header/>      
 
       <CreateToDo/>
+
+      <ToDoList todos={todos}/> 
 
     </div>
   )
