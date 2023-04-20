@@ -1,3 +1,4 @@
+import Router from "next/router"
 import { useState } from "react"
 
 export const CreateToDo = () => {
@@ -7,8 +8,8 @@ export const CreateToDo = () => {
   const handleClick = async () => {
     await fetch("/api/todo", {
       method: "POST",
-      body: JSON.stringify(description)
-    })
+      body: JSON.stringify({description})
+    }).then(() => Router.reload())
   }
 
   return (
@@ -23,7 +24,7 @@ export const CreateToDo = () => {
         <div className="flex space-x-2 p-2 bg-white rounded-md">
           <input
             value={description}
-            onChance={event => setDescription(event.currentTarget.value)}
+            onChange={event => setDescription(event.currentTarget.value)}
             type="text"
             placeholder="Write here..."
             className="w-full outline-none"
