@@ -4,7 +4,7 @@ import { ToDo } from "./Todo";
 export const ToDoList = ({todos}:{todos:Todo[]}) => {
   
   return (
-    <div className="flex flex-1">
+    <div className="items-center justify-center">
       {
         todos?.map((todo, index) => (<ToDo key={todo.id} index={index} it={todo} />))
       }
