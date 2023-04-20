@@ -12,7 +12,12 @@ export const ToDo = ({it, index}: {index: number, it: Todo}) => {
     }).then(() => Router.reload())
   }
 
-  
+  function updateToDo(){
+    fetch('/api/todo', {
+      method:"PUT",
+      body: JSON.stringify(it)
+    })
+  }
 
   return (
     <div className="flex justify-center">
