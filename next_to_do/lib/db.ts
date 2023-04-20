@@ -15,4 +15,11 @@ export async function deleteTodo(id:number) {
                 .delete({ where:{id} })
 }
 
-
+export async function updateTodo(todo: Todo){
+  return await prisma
+                .todo
+                .update({
+                  where:{id: todo.id},
+                  data:{...todo}
+                })
+}
