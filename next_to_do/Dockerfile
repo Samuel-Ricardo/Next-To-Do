@@ -13,6 +13,8 @@ RUN npm install
 #RUN chmod u+x ./.docker/entrypoint.sh
 #ENTRYPOINT ["./.docker/entrypoint.sh"]
 
+RUN npx prisma generate
+
 CMD ["npm", "run", "dev"]
 
 EXPOSE 3000 
